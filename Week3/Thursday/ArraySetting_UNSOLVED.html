@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array Modifications</title>
+</head>
+<body>
+	<script>
+
+	// Create an Array of Drinks with all capital letters
+	// ...
+	var drinks = ["Coke", "Pepsi", "Water", "Orange Juice"];
+	// ...
+
+	console.log("First statement");
+	console.log(drinks[0].toLowerCase());
+
+	// Then modify each element of the array (individually) to make them lowercase
+	// ...
+
+	
+
+	// CODE GOES HERE
+
+	// ...
+
+	console.log("Second statement");
+	console.log(drinks[0].toLowerCase());
+	console.log(drinks[1].toLowerCase());
+	console.log(drinks[2].toLowerCase());
+	console.log(drinks[3].toLowerCase());
+
+
+	console.log("loop");
+	for (var i = 0; i < drinks.length; i++) {
+		console.log(drinks[i].toLowerCase());
+	}
+
+	Instructions:
+
+		//Spend a few moments, re-writing the code below using a for-loop.
+		zooAnimals = ["Zebra", "Rhino", "Giraffe", "Owl"];
+
+		console.log(zooAnimals[0]); 
+		console.log(zooAnimals[1]);
+		console.log(zooAnimals[2]);
+		console.log(zooAnimals[3]);
+		//Feel free to use the code from the previous example as guide.
+
+		for (var i = zooAnimals.length; i > -1; i-- ) {
+			console.log(zooAnimals[i]);
+		}
+
+		//Once you think your code is functioning properly, try to explain to the person next to you how it works.
+
+		zooAnimals.forEach(function(n){
+			console.log(n);
+		})
+
+
+	</script>
+</body>
+</html>

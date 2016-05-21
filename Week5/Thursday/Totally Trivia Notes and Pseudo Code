@@ -1,0 +1,31 @@
+Totally Trivia Notes and Pseudo Code
+
+Create a function, generateHTML(), that is triggered by the start button, and generates the HTML seen on the project video...
+
+We need the generateHTML() function to generate this:
+	
+	timerFunc(): A function that counts down from 30 to 0, if the counter hits zero, the question is counted as incorrect, I replace the answers with an "out of time!" statement (as opposed to the incorrect statement), followed by the correct answer, and an image below. after a 3 second pause generateHTML() is run again.
+
+	Time Remaining: (the counter for the timerFunc() is displayed here)
+
+	Question: (the current question is displayed here)
+
+	Four divs that contain the possible answers (onclick, these divs run another function, testAnswer(), which:
+		runs the content of the div against the appropriate answer, and...
+			if correct, replaces the answers with a "correct!" statement followed by the correct answer, and an image below.
+
+				there should then be a break of 3 seconds, and the generateHTML() function should run
+
+			if incorrect, replaces the answers with an "incorrect!" statement followed by the correct answer, and an image below.
+
+Create a function, timerFunc() that counts down from 30 seconds to zero...
+
+IF the timerFunc() counter hits zero, I run the generateHTML() function again, with new variables.
+
+There should be an incorrect() function and a correct() function.
+
+There should be 8 total questions
+The correct answers, incorrect answers, and unanswered questions should all be tracked, and loaded with a generateScoreHTML() function, which runs when the answerCount variable = 8, superceding the usual generateHTML() function.
+
+There should be a start over button which clears all variables and runs generateHTML();
+

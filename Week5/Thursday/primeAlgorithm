@@ -1,0 +1,33 @@
+	
+	function isPrime(a) {
+		var b = a - 1;
+	    var IsPrime = true;
+	    while (b !== 1) {
+	      if (a % b === 0)
+	      IsPrime = false;
+	      b = b - 1;
+	    }
+	    if (IsPrime === true) {
+		    console.log(true);
+	    }
+	    else {
+	    	console.log(false);
+	    }
+    }
+
+    isPrime(105);
+
+
+
+
+
+
+    function isPrime(a) {
+    	var numberArray = [];
+    	for(var i = a; i > a; i--) {
+    		numberArray.push(i);
+    	}
+    	console.log(numberArray);
+    }
+
+    isPrime(5);

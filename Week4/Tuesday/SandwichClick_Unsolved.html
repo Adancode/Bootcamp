@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trigger Clicked</title>
+
+	<!-- Added link to the jQuery Library -->
+	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<h1>Click to Eat Sandwich</h1>
+<h3 id="pbj">Peanut Butter Jelly</h1>
+<h3 id="grillcheese">Grilled Cheese</h3>
+<h3 id="roastbeef">Roast Beef</h3>
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    // VARIABLES
+    // ====================================================================
+    // Here we create variables for tracking the number of sandwiches eaten
+    // ....
+
+    var counterPBJ = 0;
+    var grillCheese = 0;
+    var roastBeef = 0;
+
+    // ...
+
+
+    // FUNCTIONS
+    // ====================================================================
+    // Here we create various on "click" functions which capture the clicks
+    // Inside each click event is the code to create an alert, update the counter, then show the updated count.
+    // ....
+
+    $("#pbj").on("click", function () { 
+        counterPBJ++; 
+        alert(counterPBJ + " peanut butter and jelly sandwich eaten"); 
+    });
+
+    $("#grillcheese").on("click", function () {
+        grillCheese  ++;
+        alert(grillCheese +  " grilled cheese sandwich eaten");
+    });
+
+    $("#roastbeef").on("click", function () {
+        roastBeef+= 1;
+        alert(roastBeef + " roast beef sandwich eaten");
+    });
+
+
+
+
+
+    // ...
+
+
+
+
+})
+
+
+
+</script>
+	
+</body>
+</html>

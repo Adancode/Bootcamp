@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h1>Press "p" to play.</h1>
+<h1>To exit, press "x"</h1>
+<h1>Enter "t" for true</h1>
+<h1>Enter "f" for false</h1>
+<script type="text/javascript">
+    var options = ['p', 'x', 't', 'f'];
+    var questions = {
+        q1: ["The President of the United States is Barack Obama", 't'],
+        q2: ["The speed of light is 209 792 458 m / s", 'f'],
+        q3: ["Time is relative", 't']
+    }
+    var triviaQuestions = [questions.q1[0], questions.q2[0], questions.q3[0]];
+    var triviaAnswer = [questions.q1[1], questions.q2[1], questions.q3[1]];
+    console.log(JSON.stringify(triviaAnswer));
+    var correct = 0;
+    var incorrect = 0;
+    document.onkeyup = function(event) {
+        var userInput = String.fromCharCode(event.keyCode).toLowerCase();
+        //loop until all questions have been asked
+            for (var i=0; i < triviaQuestions.length; i++){
+                //ask the question
+                prompt(triviaQuestions[i]);
+            }
+            /*if (userInput == "t" || userInput == "f") {
+                for (var j=0; j < triviaAnswer; j++) {
+                    prompt(triviaAnswer[j]);
+                    if (userInput == triviaAnswer[j]) {
+                        alert("correct");
+                    } else {
+                        alert("incorrect");
+                    }
+                }
+            }*/
+    }
+
+</script>
+
+</body>
+</html>

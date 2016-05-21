@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors Part 1</title>
+</head>
+<body>
+
+<p>Press r, p, or s to start playing</p>
+
+<div id="game">
+
+</div>
+
+
+<script type="text/javascript">
+
+// Create an array that lists out all of the options
+var options = ['r','p','s'];
+
+var wins = 0;
+var losses = 0;
+var ties = 0;
+
+var html =
+        "<p>wins: " + wins + "</p>" +
+        "<p>losses: " + losses + "</p>" +
+        "<p>ties: " + ties + "</p>";
+
+        document.querySelector("#game").innerHTML = html;   
+
+// Captures Key Clicks
+document.onkeyup = function(event) {
+
+	// Determines which exact key was selected. Make it lowercase
+	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+	// Alerts with user guess
+	alert(userGuess);
+
+	// Create code to randomly choose one of the three options (Computer)
+	var computerGuess = options[Math.floor(Math.random()*options.length)];
+
+	// Alerts with Computer guess
+	alert(computerGuess);
+
+    function updateScore() {
+        var html =
+        "<p>wins: " + wins + "</p>" +
+        "<p>losses: " + losses + "</p>" +
+        "<p>ties: " + ties + "</p>";
+
+        document.querySelector("#game").innerHTML = html;
+    }
+
+var compare = function(choice1, choice2) {
+    if (choice1 === choice2) {
+        ties++;
+        updateScore();
+    	return("The result is a tie!");
+    	   
+
+    }
+    else if(choice1 === "r") {
+
+        if(choice2 === "s") {
+            wins++;
+            updateScore();
+            return("You win!");
+        }
+        else {
+            losses++;
+            updateScore();
+            return("Computer wins");
+        }
+    }
+
+    else if(choice1 === "p") {
+
+        if(choice2 === "r") {
+            wins++;
+            updateScore();
+            return("You win!");
+        }
+        else {
+            losses++;
+            updateScore();
+            return("Computer wins");
+        }
+
+    }
+
+     else if(choice1 === "s") {
+
+        if(choice2 === "r") {
+            losses++;
+            updateScore();
+            return("Computer wins");
+        }
+        else {
+             wins++;
+            updateScore();
+            return("You win!");
+        }
+        
+    }
+
+
+   
+};
+
+console.log(compare(userGuess, computerGuess));
+}
+
+
+
+
+</script>
+</body>
+</html>

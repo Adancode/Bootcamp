@@ -1,0 +1,45 @@
+$(document).ready(function(){
+//set global vars
+
+
+    // Check if any button is clicked...
+    $('button').on("click", function() {
+
+        // Checks if it's a number
+        if ($(this).hasClass("number") && !lockButtons){
+
+            hasNumber = true;
+
+            //more code
+            }
+        }
+
+        // Checks if its an operator (but not =)
+        if ($(this).hasClass("operator") && hasNumber && !lockButtons){
+            
+            firstNumberComplete = true;
+
+            //more code
+        }
+
+        // Checks if the equal button has been pressed. If so...
+        if($(this).hasClass("equal")){
+
+            // Lock the keyboard from being clicked
+            lockButtons = true;
+
+            firstNumber = parseInt(firstNumber);
+            secondNumber = parseInt(secondNumber);
+
+            // Then figure out which operator was clicked and perform the necessary functions. 
+            // Then show the result in the html
+            
+        }
+
+        // If clear is selected then wipe away all of the content from the screen and unlock the buttons.
+        if($(this).hasClass('clear')){
+
+        }
+    })
+
+})

@@ -1,0 +1,90 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+#targetParagraph {
+	
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 30px;
+	margin-bottom: 30px;
+	font-family: 'Raleway', sans-serif;
+}
+
+#sub1 {
+	font-family: 'Indie Flower', cursive;
+	font-size: 30px;
+}
+
+#sub1:hover {
+	font-size: 20px;
+	color: red;
+}
+
+#sub1::first-letter {
+	font-size: 80px;
+	
+}
+
+#sub2 {
+	font-family: 'Monofett', cursive;
+	font-size: 30px;
+}
+
+#sub2::first-letter {
+	font-size: 80px;
+	
+}
+
+
+#sub2:hover {
+	font-size: 20px;
+	color: red;
+}
+
+#sub3 {
+	font-family: 'Monoton', cursive;
+	font-size: 30px;
+}
+
+#sub3:hover {
+	font-size: 20px;
+	color: red;
+}
+
+#link1:hover {
+	font-size: 30px;
+	color: red;
+	font-weight: 400;
+}
+
+#link2:hover {
+	font-size: 30px;
+	color: red;
+	font-weight: 400;
+}
+
+#link3:hover {
+	font-size: 30px;
+	color: red;
+	font-weight: 400;
+}
+
+#link4:hover {
+	font-size: 30px;
+	color: red;
+	font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+

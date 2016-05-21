@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors Part 1</title>
+</head>
+<body>
+
+<p>Press r, p, or s to start playing</p>
+
+<div id="game">
+
+</div>
+
+
+<script type="text/javascript">
+
+// Create an array that lists out all of the options
+var options = ['r','p','s'];
+
+var wins = 0;
+var losses = 0;
+var ties = 0;
+
+// Captures Key Clicks
+document.onkeyup = function(event) {
+
+	// Determines which exact key was selected. Make it lowercase
+	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+	// Alerts with user guess
+	alert(userGuess);
+
+	// Create code to randomly choose one of the three options (Computer) 
+	var computerGuess = options[Math.floor(Math.random()*options.length)];
+
+	// Alerts with Computer guess
+	alert(computerGuess);
+
+
+
+	
+		var html = 
+		"<p>wins: " +
+		wins +
+		"</p>" +
+		"<p>" +
+		losses +
+		"</p>" +
+		"<p>" +
+		ties +
+		"</p>";
+
+		document.querySelector("#game").innerHTML = html;
+	
+
+	
+
+var compare = function(choice1, choice2) {
+	if ((userGuess == 'r') || (userGuess == 'p') || (userGuess == 's')){
+    if (choice1 === choice2) {
+    	return("The result is a tie!");
+    	ties = ties + 1; 
+  
+    }
+    else if(choice1 === "r") {
+
+        if(choice2 === "s") {
+            return("You win!");
+            wins = wins + 1;
+            
+        }
+        else {
+            return("Computer wins");
+            losses = losses + 1;
+            
+        }
+    }
+
+    else if(choice1 === "p") {
+
+        if(choice2 === "r") {
+            return("You win!");
+            wins = wins + 1;
+           
+        }
+        else {
+            return("Computer wins");
+            losses = losses + 1;
+            
+        }
+
+    }
+
+     else if(choice1 === "s") {
+
+        if(choice2 === "r") {
+            return("Computer wins");
+            losses = losses + 1;
+            
+        }
+        else {
+            return("You win!");
+            wins = wins + 1;
+            
+        }
+        var html = 
+		"<p>wins: " +
+		wins +
+		"</p>" +
+		"<p>" +
+		losses +
+		"</p>" +
+		"<p>" +
+		ties +
+		"</p>";
+
+		document.querySelector("#game").innerHTML = html;
+    }
+   }	
+
+};
+
+console.log(compare(userGuess, computerGuess));
+
+}
+
+
+</script>
+</body>
+</html>
